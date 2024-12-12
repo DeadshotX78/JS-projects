@@ -1,0 +1,156 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  /* Input Section */
+  .task-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .task-input input,
+  .task-input select,
+  .task-input button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .task-input input {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .task-input button {
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .task-input button:hover {
+    background-color: #4cae4c;
+  }
+  
+  /* Task List */
+  #taskList {
+    list-style: none;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  #taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #taskList li.completed {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #f0f0f0;
+  }
+  
+  .priority {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .deadline {
+    margin-left: 10px;
+    color: #555;
+    font-style: italic;
+  }
+  
+  /* Buttons */
+  .complete-btn,
+  .delete-btn {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .complete-btn {
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .complete-btn:hover {
+    background-color: #4cae4c;
+  }
+  
+  .delete-btn {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c9302c;
+  }
+
+  .clear-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .clear-btn:hover {
+    background-color: #c9302c;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 600px) {
+    .task-input {
+      flex-direction: column;
+    }
+  
+    .task-input input,
+    .task-input select,
+    .task-input button {
+      width: 100%;
+    }
+  
+    #taskList li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .complete-btn,
+    .delete-btn {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  
